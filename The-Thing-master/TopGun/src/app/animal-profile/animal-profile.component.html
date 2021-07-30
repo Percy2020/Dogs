@@ -1,0 +1,52 @@
+<div class="container margin-top">
+    <div [ngClass]="{ hide: showSuccessful }" class="successful">{{ successMessage }}</div>
+      <form #animalForm="ngForm">
+
+        <div class="form-group">
+        <label for="inputDateOfBirth" class="control-label">Födelsedatum</label>
+        <input
+          type="date"
+          class="form-control"
+          name="inputDateOfBirth"
+          id="inputDateOfBirth"
+          placeholder="Ange din e-postadress"
+          name="date"
+          [(ngModel)]="animal.dateOfBirth"
+          #DateOfBirthControl="ngModel"
+          required 
+        />
+        <span
+          class="help-block text-danger"
+          *ngIf="(DateOfBirthControl.errors && DateOfBirthControl.touched)">Får inte vara tom</span>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Type</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Example file input</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </form>
+
+
+        <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="saveAnimal()"
+        [disabled]="animalForm.invalid || !animalForm.dirty"
+      >
+        Spara
+      </button>
+
+    </form>
+</div>

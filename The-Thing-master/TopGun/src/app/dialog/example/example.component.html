@@ -1,0 +1,26 @@
+<!--<div class="text-wrapper"><p>{{config.data.message}}</p></div>
+<div class="actions">
+  <button class="button" (click)="onClose()">CANCEL</button>
+  <button class="button" (click)="onClose()">OK</button>
+</div>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>{{config.data.title}}</h3>
+      <span class="close" (click)="onClose()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>{{config.data.message}}</p>
+    </div>
+    <div class="modal-footer">
+ 
+      <button type="button" class="btn btn-outline-dark" (click)="onClose()">CANCEL</button>
+      <button type="button" class="btn btn-outline-dark" (click)="onClose()">OK</button>
+    </div>
+  </div>
+
+</div>

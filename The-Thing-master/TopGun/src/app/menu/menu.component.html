@@ -1,0 +1,85 @@
+
+<nav class=" menu navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" (click)="navigate(pathItem[0])">Eco</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="navigate(pathItem[0])">Torget<span class="sr-only">(current)</span></a>
+        </li>
+ 
+        <li class="nav-item active">
+          <a class="nav-link" (click)="navigate(pathItem[3])">Dina husdjur</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" (click)="navigate(pathItem[4])">Dit husdjur</a>
+        </li>
+
+    
+           <!-- Dropdown -->
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Beräkna skatt 
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="navigate(pathItem[0])">Aktiebolag</a>
+            <a class="dropdown-item" (click)="navigate(pathItem[1])">Enskild Firma</a>
+            <a class="dropdown-item" (click)="navigate(pathItem[2])">Handelsbolag</a>
+          </div>
+        </li>
+    
+
+      
+         <!-- Dropdown -->
+    <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+           Test
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">test1</a>
+          <a class="dropdown-item" href="#">test2</a>
+        </div>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate(pathItem[1])">Om oss</a>
+        </li>-->
+  
+      </ul>
+      <!--<form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>-->
+      <!--<form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>-->
+
+      <div class=" mt-2 mt-md-0">
+        <ul class="navbar-nav mr-auto">
+         <!-- Dropdown -->
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+             <i class="fas fa-user"></i>{{userName}}
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="navigate(pathItem[2])"><i class="fas fa-cog"></i> Inställningar</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logga ut</a>
+          </div>
+        </li> 
+      </ul>
+ 
+      </div>
+      
+    </div>
+  </div>
+
+  </nav>
+
+
+  

@@ -1,0 +1,69 @@
+<!--<p>login works!</p>-->
+
+
+<div class="bg">
+
+  <div class="container login-box">
+    <div class="center-div">
+
+      <div class="card box-shadow">
+        <div class="card-header">
+
+          <h4 class="center-v2 my-0 font-weight-normal form-title ">TopGun</h4>
+
+        </div>
+        <div class="card-body">
+          <form #loginForm="ngForm" class="padding-b">
+            <div class="form-group ">
+              <label for="email">Email address</label>
+              <input pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required type="email"
+                [email]="loginData.email !== ''" class="form-control input-line" id="email" aria-describedby="emailHelp"
+                placeholder="Ange din e-postadress" [(ngModel)]="loginData.email" name="email" #emailControl="ngModel">
+
+
+              <span class=" text-danger help-block" *ngIf="emailControl.errors?.pattern && emailControl.touched">
+                Ogiltig e-postadress
+              </span>
+
+              <span class=" text-danger help-block" *ngIf="emailControl.errors?.required && emailControl.touched">
+                Email fältet får inte vara tom
+              </span>
+
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="exampleInputPassword">Lösenord</label>
+              <input required type="password" class="form-control input-line" id="exampleInputPassword"
+                placeholder="Ange dit lösenord" [(ngModel)]="loginData.password" name="password"
+                #passwordControl="ngModel">
+
+              <span class=" text-danger help-block" *ngIf="passwordControl.errors?.required && passwordControl.touched">
+                Lösenord fältet får inte vara tom
+              </span>
+
+            </div>
+
+
+
+            <div class="form-group">
+              <span class=" text-danger help-block" *ngIf="showMessage">
+                user or password is wrong
+              </span>
+            </div>
+            <button type="submit" class="center-v2 btn btn-primary" [disabled]="loginForm.invalid || !loginForm.dirty"
+              (click)="login()">login</button>
+
+
+          </form>
+
+
+
+          <a class="link" (click)="navigate()">Registrera ny användare</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,197 @@
+<!--<p>login works!</p>-->
+
+
+<div class="bg">
+
+    <div class="container login-box">
+      <div class="center-div">
+        <div class="card box-shadow">
+          <div class="card-header">
+  
+            <h4 class="center-v2 my-0 font-weight-normal form-title ">TopGun</h4>
+  
+          </div>
+          <div class="card-body">
+            <form #registerForm="ngForm" class="padding-b">
+
+              <div class="form-group has-error">
+                <label for="name">Namn</label>
+                <input 
+                required
+                type="text" 
+                class="form-control input-line" 
+                id="name" 
+                placeholder="Ange dit name"
+                [(ngModel)]="registerData.name" 
+                name="name"
+                #nameControl="ngModel" >
+       
+                <span 
+                class=" text-danger help-block"
+                 *ngIf="nameControl.errors?.required && nameControl.touched">
+                  Namn fältet får inte vara tom
+              </span>
+
+              </div>
+
+              <div class="form-group has-error">
+                <label for="surname">Efternamn</label>
+                <input 
+                required
+                type="text" 
+                class="form-control input-line" 
+                id="surname" 
+                placeholder="Ange dit efternamn"
+                [(ngModel)]="registerData.surname" 
+                name="surname"
+                #surnameControl="ngModel" >
+       
+                <span 
+                class=" text-danger help-block"
+                 *ngIf="surnameControl.errors?.required && surnameControl.touched">
+                 Efternamn fältet får inte vara tom
+              </span>
+
+              </div>
+
+              
+              <div class="form-group has-error">
+                <label for="socialSecurityNumber">Personnummer</label>
+                <input 
+                required
+                pattern="^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$"
+                type="text" 
+                class="form-control input-line" 
+                id="socialSecurityNumber" 
+                placeholder="ååååmmdd-xxxx"
+                [(ngModel)]="registerData.socialSecurityNumber" 
+                name="socialSecurityNumber"
+                minlength="12"
+                #socialSecurityNumberControl="ngModel" >
+       
+                <span 
+                class=" text-danger help-block"
+                 *ngIf="socialSecurityNumberControl.errors?.required && socialSecurityNumberControl.touched">
+                 Personnummer fältet får inte vara tom
+              </span>
+
+              <span
+              class="help-block text-danger"
+              *ngIf="socialSecurityNumberControl.errors?.minlength && socialSecurityNumberControl.touched">
+              Personnummer måste var 12 tecken: ååååmmdd-xxxx
+            </span>
+
+              <span
+              class=" text-danger help-block"
+              *ngIf="socialSecurityNumberControl.errors?.pattern && socialSecurityNumberControl.touched">
+              Personnummer är inte giltigt
+            </span>
+
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input 
+                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+                type="email" 
+                [email]="registerData.email !== ''"
+                class="form-control input-line" 
+                id="email" 
+                aria-describedby="emailHelp" 
+                placeholder="Ange din e-postadress"
+                [(ngModel)]="registerData.email" 
+                name="email"
+                #emailControl="ngModel">
+
+                <span
+                class=" text-danger help-block"
+                *ngIf="emailControl.errors?.pattern && emailControl.touched">
+                Ogiltig e-postadress
+              </span>
+  
+              <span 
+              class=" text-danger help-block"
+              *ngIf="emailControl.errors?.required && emailControl.touched">
+                Email fältet får inte vara tom
+            </span>
+
+              </div>
+
+         
+
+              <div class="form-group ">
+                <label for="password1">Lösenord</label>
+                <input 
+                required
+                type="password" 
+                class="form-control input-line" 
+                id="password1" 
+                placeholder="Ange dit lösenord"
+                [(ngModel)]="registerData.password" 
+                name="password1"
+                #passwordControl1="ngModel">
+
+                <span 
+                class=" text-danger help-block"
+                 *ngIf="passwordControl1.errors?.required && passwordControl1.touched">
+                  Lösenord fältet får inte vara tom
+              </span>
+    
+
+              </div>
+
+
+        
+
+          <div class="form-group has-error">
+            <label for="password2">Repetera lösenord</label>
+            <input 
+            required
+            type="password" 
+            class="form-control input-line" 
+            id="password2" 
+            placeholder="Ange dit lösenord"
+            [(ngModel)]="password2" 
+            name="password2"
+            #passwordControl2="ngModel" (ngModelChange)="checkSame($event)">
+   
+            <span 
+            class=" text-danger help-block"
+             *ngIf="passwordControl2.errors?.required && passwordControl2.touched">
+              Lösenord fältet får inte vara tom
+          </span>
+          
+          <span 
+          class=" text-danger help-block"
+           *ngIf="showErrorMessage === false">
+            Lösenorden är inte lika
+        </span>
+
+          </div>
+
+
+
+
+
+              <!--<div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                  </div>-->
+  
+              <button 
+              type="submit" 
+              class="center-v2 btn btn-primary" 
+              [disabled]="registerForm.invalid || !registerForm.dirty"
+              (click)="registerNewUser()">Register</button>
+  
+            </form>
+
+            <a class="link " (click)="navigate()">Gå till login</a>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

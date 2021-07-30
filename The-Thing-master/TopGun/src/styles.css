@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --darkBlue: #1a1145;
+  --blue: #0f69b3;
+  --lightBlue: rgba(178, 206, 237);
+  --gray-600: #686867;
+  --green: #0ca747;
+  --teal: #7fc182;
+  --greenHover: #40b96e;
+  --lightGreen: #46da7e;
+  --cyan: #52a0d8 !important;
+  --yellow: #fecb2e;
+  --red: rgb(197, 26, 27) !important;
+  --lightRed: rgb(247, 225, 215);
+  --danger: #adb5bd !important;
+}
+
+.margin-top {
+  margin-top: 10%;
+}
+
+.padding-b {
+  padding-bottom: 20px;
+}

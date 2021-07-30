@@ -1,0 +1,146 @@
+<div class="container margin-top">
+  <div [ngClass]="{ hide: showSuccessful }" class="successful">{{ successMessage }}</div>
+    <form #userForm="ngForm">
+         <div class="form-group">
+          <label for="inputAddress">Postadress</label>
+          <p class="user-address">
+            <span *ngIf="userAddressEmpty()">Adressuppgifter saknas</span>
+            <span *ngIf="user.address.attention">att. {{ user.address.attention }}</span>
+            <span *ngIf="user.address.careOf">c/o {{ user.address.careOf }}</span>
+            <span *ngIf="user.address.street">{{ user.address.street }}</span>
+            <span *ngIf="user.address.zipCode || user.address.city"
+              >{{ user.address.zipCode }}{{ user.address.zipCode && user.address.city ? " " : " "
+              }}{{ user.address.city }}</span
+            >
+            <span *ngIf="user.address.country">{{ user.address.country }}</span>
+          </p>
+        </div>
+
+          <div
+          class="form-group"
+          [class.has-error]="emailControl.invalid && (emailControl.dirty || emailControl.touched)"
+          [class.has-success]="emailControl.valid"
+        >
+          <label for="inputEmail4" class="control-label">E-post</label>
+          <input
+            type="email"
+            [email]="user.email !== ''"
+            pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*(\+[a-zA-Z0-9-]+)?@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$"
+            class="form-control"
+            name="inputEmail4"
+            id="inputEmail4"
+            placeholder="Ange din e-postadress"
+            name="email"
+            [(ngModel)]="user.email"
+            #emailControl="ngModel"
+          />
+          <span
+            class="help-block text-danger"
+            *ngIf="
+              (emailControl.errors?.email && emailControl.touched) ||
+              (emailControl.errors?.pattern && emailControl.touched)
+            "
+            >Ogiltig e-postadress</span
+          >
+        </div>
+
+          <div class="form-group">
+          <div class="form-check">
+            <div class="row " *ngIf="user">
+              <div class="col-md-1 ">
+                <label class="switch space-left">
+                  <input type="checkbox" name="checkbox" [(ngModel)]="user.subscribeToEmailNotification" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="col-md-9 ">
+                <label class="form-check-label space-right">
+                  Jag accepterar att bli aviserad via e-post, när nya djur är till salu/stora ändringar inträffar.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div
+          class="form-group"
+          [class.has-error]="mobilePhoneControl.invalid && (mobilePhoneControl.dirty || mobilePhoneControl.touched)"
+          [class.has-success]="mobilePhoneControl.valid"
+        >
+          <label for="inputMobilePhone">Mobiltelefon</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputMobilePhone"
+            name="inputMobilePhone"
+            placeholder="Skriv in ditt Mobilnummer"
+            [(ngModel)]="user.mobilePhoneNumber"
+            #mobilePhoneControl="ngModel"
+            (ngModelChange)="formPhoneNumberValidation(1,$event)"
+            minlength="5"
+          />
+          <span
+            class="help-block text-danger"
+            *ngIf="
+              (mobilePhoneControl.errors?.invalid && mobilePhoneControl.touched) ||
+              (mobilePhoneControl.errors?.minlength && mobilePhoneControl.touched)
+            "
+            >Inget Mobilnummer</span
+          >
+        </div>
+
+        <div
+          class="form-group"
+          [class.has-error]="phoneControl.errors?.invalid && (phoneControl.dirty || phoneControl.touched)"
+          [class.has-success]="phoneControl.valid"
+        >
+          <label for="inputPhone">Telefon</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPhone"
+            name="inputPhone"
+            placeholder="Skriv in ditt telefonnummer"
+            [(ngModel)]="user.phoneNumber"
+            #phoneControl="ngModel"
+            (ngModelChange)="formPhoneNumberValidation(0,$event)"
+            minlength="5"
+          />
+          <span
+            class="help-block text-danger"
+            *ngIf="
+              (phoneControl.errors?.invalid && phoneControl.touched) ||
+              (phoneControl.errors?.minlength && phoneControl.touched)
+            "
+            >Inget Telefonnummer
+          </span>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <div class="row">
+              <div class="col-md-1 ">
+                <label class="switch space-left">
+                  <input type="checkbox" name="userCheckbox" [(ngModel)]="user.agreeMarketing" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="col-md-9 ">
+                <label class="form-check-label space-right">
+                  Jag accepterar att bli kontaktad gällande tips och erbjudanden från RedRiver.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="saveUser()"
+          [disabled]="userForm.invalid || !userForm.dirty"
+        >
+          Spara
+        </button>
+      </form>
+</div>

@@ -1,0 +1,137 @@
+p.user-address {
+    background-color: #e9ecef;
+    border: 1px solid #cecece;
+    border-radius: 0.1rem;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+   
+  }
+  p > span {
+    display: block;
+  }
+
+  
+.has-error .form-control {
+  border-color: var(--red);
+}
+
+.has-error .form-control {
+  border-color: var(--red);
+}
+
+.form-control:focus{
+  border-color:var(--green) !important
+}
+
+.collapse {
+  -webkit-transition: height 0s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+.collapsing {
+  -webkit-transition: height 0s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: var(--blue);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px var(--blue);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.hide {
+  display: none;
+}
+
+.successful{
+  background-color: var(--green);
+  color: white;
+  padding: 12px 12px 12px 48px;
+}
+
+ .text-white {
+  color: #000 !important;
+}
+
+.card{
+  border: 0px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #404140;
+  border-color: #404140;
+}
+
+.card-header{
+  font-size: 1.4em;
+  background: none !important;
+  padding: 0px 12px 12px 48px;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+}
+.card-body{
+  padding: 12px 48px 12px 48px;
+}
+
+
+.text-danger{
+color: var(--red) !important;
+}

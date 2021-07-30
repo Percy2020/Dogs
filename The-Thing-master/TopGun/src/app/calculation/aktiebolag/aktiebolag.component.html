@@ -1,0 +1,51 @@
+<div class="container margin-top">
+
+<form>
+
+  
+      <div class="form-group row">
+        <label for="inputEmail1" class="col-sm-2 col-form-label" data-toggle="collapse" data-target="#info1">Intäkter</label>
+        <div id="info1" class="collapse container ">
+          Bolagets intäkter: Med Bolagets intäkter menas alla pengar som bolaget fått in under året, ej moms. Alltså, innan skatter och utgifter, rå input, den summa pengar som har/kommer gå in bolaget under året.
+        </div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail1" placeholder="Intäkter"  name="income" [(ngModel)]="calculationInput.income">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail2" class="col-sm-2 col-form-label" data-toggle="collapse" data-target="#info2">Kostnader exklusive löner</label>
+
+        <div id="info2" class="collapse container ">
+          Bolagets utgifter(exklusive löner):Med bolagets utgifter/kostnader (exklusive löner)  menas alla pengar som bolaget betalat ut under året, t.ex. för diverse inköp, men inga löne-relaterade kostnader, såsom lön och arbetsgivaravgift eller pensionsutbetalningar, och heller ingen moms.
+        </div> 
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail2" placeholder="Kostnader exklusive löner" name="costs" [(ngModel)]="calculationInput.costs">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label" data-toggle="collapse" data-target="#info3">Anskaffningsutgiften</label>
+        <div id="info3" class="collapse container ">
+          Bolagets utgifter(exklusive löner):Med bolagets utgifter/kostnader (exklusive löner)  menas alla pengar som bolaget betalat ut under året, t.ex. för diverse inköp, men inga löne-relaterade kostnader, såsom lön och arbetsgivaravgift eller pensionsutbetalningar, och heller ingen moms.
+        </div> 
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3" placeholder="Anskaffningsutgiften" name="acquisitionCost" [(ngModel)]="calculationInput.acquisitionCost">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail4" class="col-sm-2 col-form-label" data-toggle="collapse" data-target="#info4">utdelningsutrymme i från tidigare år</label>
+        <div id="info4" class="collapse container ">
+          Bolagets utgifter(exklusive löner):Med bolagets utgifter/kostnader (exklusive löner)  menas alla pengar som bolaget betalat ut under året, t.ex. för diverse inköp, men inga löne-relaterade kostnader, såsom lön och arbetsgivaravgift eller pensionsutbetalningar, och heller ingen moms.
+        </div> 
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail4" placeholder="utdelningsutrymme i från tidigare år" name="dividend" [(ngModel)]="calculationInput.dividend" >
+        </div>
+      </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" (click)="startCalculation()">Gör beräkning</button>
+      </div>
+    </div>
+  </form>
+</div>

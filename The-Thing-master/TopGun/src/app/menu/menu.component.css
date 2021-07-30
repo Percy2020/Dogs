@@ -1,0 +1,56 @@
+.dropdown-item:hover {
+  background-color: gainsboro;
+}
+
+.menu {
+  padding: 20px 0px 20px 0px;
+  /*border-bottom: solid 1px;*/
+  border-bottom: .3rem solid #39cfba;
+}
+
+a {
+  font-size: 21px;
+  cursor: pointer;
+}
+
+a:hover {
+
+  /* border-bottom: .2rem solid #39cfba;*/
+
+}
+
+li:hover {
+  padding-bottom: 40px;
+  border-bottom: .2rem solid #39cfba;
+
+}
+
+
+.navbar-brand {
+  font-size: 30px;
+
+}
+
+.navbar-brand:hover {
+  font-size: 30px;
+  border-bottom: none;
+
+}
+
+.navbar-nav {
+  height: 38px;
+
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    height: auto;
+
+  }
+
+  li:hover {
+    padding-bottom: 0px;
+    border-bottom: .2rem solid #39cfba;
+
+  }
+}

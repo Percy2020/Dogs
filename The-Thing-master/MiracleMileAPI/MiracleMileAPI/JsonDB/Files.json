@@ -1,0 +1,63 @@
+{
+  "address": {
+    "street": "El Camino Real",
+    "city": "New Delhi",
+    "zipcode": 950
+  },
+  "uploadFiles": [
+    {
+      "Id": "8895750",
+      "AnimalId": "416261880",
+      "Name": "013.JPG",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\013.JPG"
+    },
+    {
+      "Id": "8107620",
+      "AnimalId": "416261880",
+      "Name": "019.JPG",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\019.JPG"
+    },
+    {
+      "Id": "2235920",
+      "AnimalId": "-589479615",
+      "Name": "Chrysanthemum.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Chrysanthemum.jpg"
+    },
+    {
+      "Id": "7430121",
+      "AnimalId": "-589479615",
+      "Name": "Desert.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Desert.jpg"
+    },
+    {
+      "Id": "6875906",
+      "AnimalId": "-589479615",
+      "Name": "Jellyfish.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Jellyfish.jpg"
+    },
+    {
+      "Id": "7894393",
+      "AnimalId": "1935653987",
+      "Name": "Jellyfish.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Jellyfish.jpg"
+    },
+    {
+      "Id": "3247421",
+      "AnimalId": "0",
+      "Name": "Desert.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Desert.jpg"
+    },
+    {
+      "Id": "1833933",
+      "AnimalId": "213520260",
+      "Name": "Chrysanthemum.jpg",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\Chrysanthemum.jpg"
+    },
+    {
+      "Id": "7249204",
+      "AnimalId": "1935653987",
+      "Name": "VisualCode - Copy.png",
+      "Url": "C:\\angular\\The-Thing-master\\MiracleMileAPI\\MiracleMileAPI\\Resources\\Images\\VisualCode - Copy.png"
+    }
+  ]
+}
