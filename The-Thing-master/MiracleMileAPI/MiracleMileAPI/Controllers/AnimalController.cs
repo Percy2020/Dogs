@@ -24,7 +24,7 @@ namespace MiracleMileAPI.Controllers
       _hostingEnvironment = hostingEnvironment;
 
     }
-    // GET: api/Animal
+    // GET: api/Animal test
     [HttpGet("getAnimalTypes")]
     public IEnumerable<string> GetAnimalTypes()
     {
